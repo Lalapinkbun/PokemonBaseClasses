@@ -25,7 +25,7 @@
 
         public int CalculateDamage(Pokemon attacker, Pokemon defender)
         {
-            int FinaleDamage = 0;
+            float FinaleDamage = 0;
             int Damage = 0;
             if (Type == "Physical")
                 Damage = attacker.GetAttack() - (int)(Power / 10);
@@ -40,18 +40,11 @@
                 {
                     if (Soft == "Physical")
                     {
-                        if (typeChart.IsTypeEffective(attacker.GetPokemonType(), defender.GetPokemonType()))
-                            FinaleDamage = Damage * 2 - (int)(defender.GetDefend() / 2);
-
-                        else
-                            FinaleDamage = Damage - (int)(defender.GetDefend() / 2);
+                        FinaleDamage = (Damage * typeChart.IsTypeEffectiveAndCountPlusDamage(attacker.GetPokemonType(), defender.GetPokemonType())) - (int)(defender.GetDefend() / 2);
                     }
                     else if (Soft == "Special")
                     {
-                        if (typeChart.IsTypeEffective(attacker.GetPokemonType(), defender.GetPokemonType()))
-                            FinaleDamage = Damage * 2 - (int)(defender.GetSpecialDefend() / 2);
-                        else
-                            FinaleDamage = Damage - (int)(defender.GetSpecialDefend() / 2);
+                        FinaleDamage = (Damage * typeChart.IsTypeEffectiveAndCountPlusDamage(attacker.GetPokemonType(), defender.GetPokemonType())) - (int)(defender.GetSpecialDefend() / 2);
                     }
                     else if (Soft == "Status")
                     {
@@ -65,7 +58,7 @@
             }
 
 
-            return FinaleDamage;
+            return (int)FinaleDamage;
         }
 
         private void Status(Pokemon attacker, Pokemon defender)
