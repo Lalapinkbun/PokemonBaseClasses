@@ -8,42 +8,78 @@ namespace LalaPokemon
 {
     public class TypeChart
     {
-        private Dictionary<string, List<string>> typeChart;
+        private Dictionary<string, List<string>> typeChartEffective;
+        private Dictionary<string, List<string>> typeChartIneffective;
 
         public TypeChart()
         {
-            typeChart = new Dictionary<string, List<string>>();
+            typeChartEffective = new Dictionary<string, List<string>>();
+            typeChartIneffective = new Dictionary<string, List<string>>();
             ReadTypeChart();
         }
 
+        
         private void ReadTypeChart()
         {
-            typeChart["Normal"] = new List<string>();
-            typeChart["Fighting"] = new List<string> { "Normal", "Rock", "Steel", "Ice", "Dark" };
-            typeChart["Flying"] = new List<string> { "Fighting", "Bug", "Grass" };
-            typeChart["Poison"] = new List<string> { "Grass", "Fairy" };
-            typeChart["Ground"] = new List<string> { "Poison", "Rock", "Steel", "Fire", "Electric" };
-            typeChart["Rock"] = new List<string> { "Flying", "Bug", "Fire", "Ice" };
-            typeChart["Bug"] = new List<string> { "Grass", "Psychic", "Dark" };
-            typeChart["Ghost"] = new List<string> { "Ghost", "Psychic", "Dark" };
-            typeChart["Steel"] = new List<string> { "Rock", "Ice", "Fairy" };
-            typeChart["Fire"] = new List<string> { "Rock", "Grass", "Steel", "Ice" };
-            typeChart["Water"] = new List<string> { "Rock", "Ground", "Fire" };
-            typeChart["Grass"] = new List<string> { "Rock", "Ground", "Water" };
-            typeChart["Electric"] = new List<string> { "Flying", "Water" };
-            typeChart["Psychic"] = new List<string> { "Fighting", "Poison" };
-            typeChart["Ice"] = new List<string> { "Flying", "Ground", "Grass", "Dragon" };
-            typeChart["Dragon"] = new List<string> { "Dragon" };
-            typeChart["Dark"] = new List<string> { "Ghost", "Psychic" };
-            typeChart["Fairy"] = new List<string> { "Fighting", "Dragon", "Dark" };
+            //The Type Was Effective x2
+            typeChartEffective["Normal"] = new List<string>();
+            typeChartEffective["Fighting"] = new List<string> { "Normal", "Rock", "Steel", "Ice", "Dark" };
+            typeChartEffective["Flying"] = new List<string> { "Fighting", "Bug", "Grass" };
+            typeChartEffective["Poison"] = new List<string> { "Grass", "Fairy" };
+            typeChartEffective["Ground"] = new List<string> { "Poison", "Rock", "Steel", "Fire", "Electric" };
+            typeChartEffective["Rock"] = new List<string> { "Flying", "Bug", "Fire", "Ice" };
+            typeChartEffective["Bug"] = new List<string> { "Grass", "Psychic", "Dark" };
+            typeChartEffective["Ghost"] = new List<string> { "Ghost", "Psychic", "Dark" };
+            typeChartEffective["Steel"] = new List<string> { "Rock", "Ice", "Fairy" };
+            typeChartEffective["Fire"] = new List<string> { "Bug", "Grass", "Steel", "Ice" };
+            typeChartEffective["Water"] = new List<string> { "Rock", "Ground", "Fire" };
+            typeChartEffective["Grass"] = new List<string> { "Rock", "Ground", "Water" };
+            typeChartEffective["Electric"] = new List<string> { "Flying", "Water" };
+            typeChartEffective["Psychic"] = new List<string> { "Fighting", "Poison" };
+            typeChartEffective["Ice"] = new List<string> { "Flying", "Ground", "Grass", "Dragon" };
+            typeChartEffective["Dragon"] = new List<string> { "Dragon" };
+            typeChartEffective["Dark"] = new List<string> { "Ghost", "Psychic" };
+            typeChartEffective["Fairy"] = new List<string> { "Fighting", "Dragon", "Dark" };
+            //The Type Was Not Effective x0.5
+            typeChartIneffective["Normal"] = new List<string> { "Rock", "Steel" };
+            typeChartIneffective["Fighting"] = new List<string> { "Flying", "Posion", "Bug", "Psychic", "Fairy" };
+            typeChartIneffective["Flying"] = new List<string> { "Rock", "Steel", "Electric" };
+            typeChartIneffective["Poison"] = new List<string> { "Poison", "Ground", "Rock", "Ghost" };
+            typeChartIneffective["Ground"] = new List<string> { "Bug", "Grass" };
+            typeChartIneffective["Rock"] = new List<string> { "Fighting", "Ground", "Steel" };
+            typeChartIneffective["Bug"] = new List<string> { "Fighting", "Flying", "Poison", "Ghost", "Steel", "Fire", "Fairy" };
+            typeChartIneffective["Ghost"] = new List<string> { "Dark" };
+            typeChartIneffective["Steel"] = new List<string> { "Steel", "Fire", "Water", "Electric" };
+            typeChartIneffective["Fire"] = new List<string> { "Rock", "Fire", "Water", "Dragon" };
+            typeChartIneffective["Water"] = new List<string> { "Water", "Grass", "Dragon" };
+            typeChartIneffective["Grass"] = new List<string> { "Flying", "Poison", "Bug", "Steel", "Fire", "Grass", "Dragon" };
+            typeChartIneffective["Electric"] = new List<string> { "Grass", "Electric", "Dragon" };
+            typeChartIneffective["Psychic"] = new List<string> { "Steel", "Psychic" };
+            typeChartIneffective["Ice"] = new List<string> { "Steel", "Fire", "Water", "Ice" };
+            typeChartIneffective["Dragon"] = new List<string> { "Steel" };
+            typeChartIneffective["Dark"] = new List<string> { "Fighting", "Dark", "Fairy" };
+            typeChartIneffective["Fairy"] = new List<string> { "Posion", "Steel", "Fire" };
         }
-        public bool IsTypeEffective(string attackerType, string defenderType)
+
+        public float IsTypeEffectiveAndCountPlusDamage(string attackerType, string defenderType)
         {
-            if (typeChart.ContainsKey(attackerType))
+            float plusDamage = 0f;
+
+            if (typeChartEffective.ContainsKey(attackerType))
             {
-                return typeChart[attackerType].Contains(defenderType);
+                plusDamage = 2f;
             }
-            return false;
+            else if (typeChartIneffective.ContainsKey(attackerType))
+            {
+                plusDamage = 0.5f;
+            }
+            else
+            {
+                plusDamage = 1f;
+            }
+
+            return plusDamage;
+
         }
     }
 }
