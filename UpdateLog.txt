@@ -5,3 +5,9 @@ Pokemon Classes Log
 v1.0 Beta
 - New Create Pokemon, Move, TypeChart Class in LalaPokemon Classes.
 - and There Have Base Pokemon thing
+
+v1.1 Beta
+- Add The typeChartIneffetive and Change [typeChart -> typeChartEffetive]
+- Add The Ineffetive Dictionary Into The ReadTypeChart()
+- Fix typeChartEffetive In Fire Wrong Type, [Rock -> Bug]
+- Change [Bool IsTypeEffective(...) -> Float IsTypeEffectiveAndCountPlusDamage(...)] and Fix To Output The x2, 1 and x0.5
