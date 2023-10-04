@@ -1,5 +1,6 @@
 # PokemonBaseClasses
 This Is The Pokemon Base Classes File To Let You Make (like Homework Or Assignment?)
+v1.1 Beta
 
 Warning:
 - This is Just For Fun, And Pls Don't Public Your Game Using This Classes
