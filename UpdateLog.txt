@@ -1,0 +1,7 @@
+Pokemon Classes Log
+
+<Lalapinkbun>
+
+v0.1 Beta
+- New Create Pokemon, Move, TypeChart Class in LalaPokemon Classes.
+- and There Have Base Pokemon thing
