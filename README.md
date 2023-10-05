@@ -11,4 +11,4 @@ Warning:
 What About Update v1.1?
 - Add The Ineffective (x0.5)
 - Fix The Wrong Effective In Fire Type
-- Fix Uses Bool To Calculate Whether Effective Instead Of Using Float To Detect Whether Effective And Gives Increased Multiple Damage Or Eeduced Multiple Damage Or Just Do Notting (x2, x0.5, x1).
+- Fix Using Float To Detect Whether Effective And Gives Increased Multiple Damage Or Eeduced Multiple Damage Or Just Do Notting (x2, x0.5, x1) Instead Of Uses Bool To Calculate Whether Effective.
