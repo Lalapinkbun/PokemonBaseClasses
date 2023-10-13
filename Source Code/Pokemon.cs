@@ -14,7 +14,7 @@
         private int SpecialDefend;
         private int Speed;
         private string Type;
-        private string Type2;
+        private string? Type2;
         private string Ability;
 
         private int needExpToLevelUp = 10;
@@ -22,7 +22,7 @@
         private bool haslevelup = false;
         private List<Move> moves = new List<Move>();
 
-
+        //Two Type
         public Pokemon(string name, int level, string pokemonID, int pokemonEXP, int hP, int aT, int sT, int dF, int sF, int sP, string type, string type2, string ability)
         {
             Name = name;
@@ -40,7 +40,7 @@
             Ability = ability;
         }
 
-
+        //One Type
         public Pokemon(string name, int level, string pokemonID, int pokemonEXP, int hP, int aT, int dF, int sT, int sF, int sP, string type, string ability)
         {
             Name = name;
@@ -54,6 +54,25 @@
             SpecialDefend = sF;
             Speed = sP;
             Type = type;
+            Ability = ability;
+        }
+
+        //One Type
+        public void Evolution(string name, string pokemonID, string type, string ability)
+        {
+            Name = name;
+            PokemonID = pokemonID;
+            Type = type;
+            Ability = ability;
+        }
+        
+        //Two Type
+        public void Evolution(string name, string pokemonID, string type, string type2, string ability)
+        {
+            Name = name;
+            PokemonID = pokemonID;
+            Type = type;
+            Type2 = type2;
             Ability = ability;
         }
 
@@ -174,7 +193,7 @@
 
         public string GetPokemonTypeTwo()
         {
-            return Type2;
+            return Type2 ?? "No Second Type";
         }
 
         public string GetAbility()
