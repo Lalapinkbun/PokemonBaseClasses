@@ -12,3 +12,8 @@ v1.1 Beta
 - Fix typeChartEffetive In Fire Wrong Type, [Rock -> Bug]
 - Change [Bool IsTypeEffective(...) -> Float IsTypeEffectiveAndCountPlusDamage(...)] and Fix To Output The x2, 1 and x0.5
 - Fix The Because Update IsTypeEffectiveAndCountPlus Damage(...) And Have Error In [Move] Class
+
+v1.2 Beta
+- Add The Two Evolution Void In Pokemon Class (1. one type 2. two type)
+- Add The Item Class.
+- Fix The Possible Null From Pokemon Class [Type 2]
