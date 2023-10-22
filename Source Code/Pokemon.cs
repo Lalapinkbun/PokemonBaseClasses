@@ -7,12 +7,18 @@
         private string PokemonID;
         private int PokemonEXP;
         //Pokemon ability
-        private int HealPoint;
-        private int Attack;
-        private int Defend;
-        private int SpecialAttack;
-        private int SpecialDefend;
-        private int Speed;
+        private int HealPointC;
+        private int HealLevelM;
+        private int AttackC;
+        private int AttackM;
+        private int DefendC;
+        private int DefendM;
+        private int SpecialAttackC;
+        private int SpecialAttackM;
+        private int SpecialDefendC;
+        private int SpecialDefendM;
+        private int SpeedC;
+        private int SpeedM;
         private string Type;
         private string? Type2;
         private string Ability;
@@ -29,12 +35,18 @@
             Level = level;
             PokemonID = pokemonID;
             PokemonEXP = pokemonEXP;
-            HealPoint = hP;
-            Attack = aT;
-            SpecialAttack = sT;
-            Defend = dF;
-            SpecialDefend = sF;
-            Speed = sP;
+            HealPointC = hP;
+            HealLevelM = hP;
+            AttackC = aT;
+            AttackM = aT;
+            SpecialAttackC = sT;
+            SpecialAttackM = sT;
+            DefendC = dF;
+            DefendM = dF;
+            SpecialDefendC = sF;
+            SpecialDefendM = sF;
+            SpeedC = sP;
+            SpeedM = sP;
             Type = type;
             Type2 = type2;
             Ability = ability;
@@ -47,12 +59,18 @@
             Level = level;
             PokemonID = pokemonID;
             PokemonEXP = pokemonEXP;
-            HealPoint = hP;
-            Attack = aT;
-            SpecialAttack = sT;
-            Defend = dF;
-            SpecialDefend = sF;
-            Speed = sP;
+            HealPointC = hP;
+            HealLevelM = hP;
+            AttackC = aT;
+            AttackM = aT;
+            SpecialAttackC = sT;
+            SpecialAttackM = sT;
+            DefendC = dF;
+            DefendM = dF;
+            SpecialDefendC = sF;
+            SpecialDefendM = sF;
+            SpeedC = sP;
+            SpeedM = sP;
             Type = type;
             Ability = ability;
         }
@@ -98,92 +116,92 @@
 
         public int GetHealPoint()
         {
-            return HealPoint;
+            return HealPointC;
         }
 
         public void UpHealPoint(int hp)
         {
-            HealPoint += hp;
+            HealPointC += hp;
         }
 
         public void DownHealPoint(int hp)
         {
-            HealPoint -= hp;
+            HealPointC -= hp;
         }
 
         public int GetAttack()
         {
-            return Attack;
+            return AttackC;
         }
 
         public void UpAttack(int at)
         {
-            Attack += at;
+            AttackC += at;
         }
 
         public void DownAttack(int at)
         {
-            Attack -= at;
+            AttackC -= at;
         }
 
         public int GetDefend()
         {
-            return Defend;
+            return DefendC;
         }
 
         public void UpDefend(int df)
         {
-            Defend += df;
+            DefendC += df;
         }
 
         public void DownDefend(int df)
         {
-            Defend -= df;
+            DefendC -= df;
         }
 
         public int GetSpecialAttack()
         {
-            return SpecialAttack;
+            return SpecialAttackC;
         }
 
         public void UpSpecialAttack(int st)
         {
-            SpecialAttack += st;
+            SpecialAttackC += st;
         }
 
         public void DownSpecialAttack(int st)
         {
-            SpecialAttack -= st;
+            SpecialAttackC -= st;
         }
 
         public int GetSpecialDefend()
         {
-            return SpecialDefend;
+            return SpecialDefendC;
         }
 
         public void UpSpecialDefend(int sf)
         {
-            SpecialDefend += sf;
+            SpecialDefendC += sf;
         }
 
         public void DowmSpecialDefend(int sf)
         {
-            SpecialDefend -= sf;
+            SpecialDefendC -= sf;
         }
 
         public int GetSpeed()
         {
-            return Speed;
+            return SpeedC;
         }
 
         public void UpSpeed(int sp)
         {
-            SpecialAttack += sp;
+            SpecialAttackC += sp;
         }
 
         public void DownSpeed(int sp)
         {
-            SpecialAttack -= sp;
+            SpecialAttackC -= sp;
         }
 
         public string GetPokemonType()
@@ -193,12 +211,26 @@
 
         public string GetPokemonTypeTwo()
         {
-            return Type2 ?? "No Second Type";
+            return Type2 ?? Name + "No Second Type";
         }
 
         public string GetAbility()
         {
             return Ability;
+        }
+
+        public void BackToDefault()
+        {
+            HealPointC = HealLevelM;
+            DefendC = DefendM;
+            SpecialAttackC = SpecialDefendM;
+            SpecialDefendC = SpecialDefendM;
+            SpeedC = SpeedM;
+        }
+
+        public void LevelUp()
+        {
+            Level++;
         }
     }
 }
