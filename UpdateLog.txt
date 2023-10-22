@@ -17,3 +17,24 @@ v1.2 Beta
 - Add The Two Evolution Void In Pokemon Class (1. one type 2. two type)
 - Add The Item Class.
 - Fix The Possible Null From Pokemon Class [Type 2]
+
+v1.3 Beta
+- Minor Update GetPokemonTypeTwo() in Pokemon Class.
+- Added ...C suffixes and ...M suffixes In Pokemon Class Data Type Name, these suffixes represent "Current" and "Max" respectively.
+====================
+[Changed]
+- Attack -> AttackC
+- Defend -> DefendC
+- SpecialAttack -> SpecialAttackC
+- SpecialDefend -> SpecialDefendC
+- Speed -> SpeedC
+[Added]
+- AttackM
+- DefendM
+- SpecialAttackM
+- SpecialDefendM
+- SpeedM
+====================
+- Fix The Error When Update The ...C and ...M suffixes in All Classes.
+- Add The BackToDefault() Function in Pokemon Class.
+- Add The LevelUp() Funchtion in Pokemon Class.
