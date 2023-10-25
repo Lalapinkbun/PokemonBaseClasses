@@ -38,3 +38,19 @@ v1.3 Beta
 - Fix The Error When Update The ...C and ...M suffixes in All Classes.
 - Add The BackToDefault() Function in Pokemon Class.
 - Add The LevelUp() Funchtion in Pokemon Class.
+
+v1.3.1 Beta
+- Fix The Problem of TypeChart Class typeChartEffective.ContainsKey(attackerType) <---- The calculation of attribute restraint is actually based on the attributes of the attacker.
+In order to consider that Pokémon may have another attribute, we also made the following changes:
+====Changed====
+-> IsTypeEffectiveAndCountPlusDamage(string attackerType, string defenderType) to IsTypeEffectiveAndCountPlusDamage(Pokemon attackerType, Pokemon defenderType)
+-> if (typeChartEffective.ContainsKey(defenderType) { } to if (typeChartEffective.ContainsKey(defenderType.GetPokemonType())) { }
+====Added====
+-> if (!(defenderType.GetPokemonTypeTwo() == "No Second Type"))
+    {
+        if (typeChartEffective.ContainsKey(defenderType.GetPokemonTypeTwo()))
+        {
+            plusDamage = xxx;
+        }
+    }
+- Fix The Error When Fix The TypeChart Class in Move Class
