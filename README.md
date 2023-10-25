@@ -5,8 +5,9 @@ Now Version:
 v1.3 Beta
 
 Warning:
-- This is Just For Fun, And Pls Don't Public Your Game Using This Classes
-- If You Are Authorized By Nintendo, You Can Publish Classes Created By Me To Introduce Your Game (Must To Credit Me To Your Game/Video)
+- This is Just For Fun.
+- You Can Use This For Your Assignment, But You Can't Publish The Game Used By My Classes, otherwise...
+- If You Are Authorized By Nintendo, You Can Publish The Game Used By My Classes (Must To Credit Me To Your Game/Video)
 
 
 # What About Update v1.3.1?
