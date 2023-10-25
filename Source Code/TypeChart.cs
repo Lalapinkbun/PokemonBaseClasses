@@ -61,17 +61,31 @@ namespace LalaPokemon
             typeChartIneffective["Fairy"] = new List<string> { "Posion", "Steel", "Fire" };
         }
 
-        public float IsTypeEffectiveAndCountPlusDamage(string attackerType, string defenderType)
+        public float IsTypeEffectiveAndCountPlusDamage(Pokemon attackerType, Pokemon defenderType)
         {
             float plusDamage = 0f;
 
-            if (typeChartEffective.ContainsKey(attackerType))
+            if (typeChartEffective.ContainsKey(defenderType.GetPokemonType()))
             {
                 plusDamage = 2f;
+                if (!(defenderType.GetPokemonTypeTwo() == "No Second Type"))
+                {
+                    if (typeChartEffective.ContainsKey(defenderType.GetPokemonTypeTwo()))
+                    {
+                        plusDamage += 2f;
+                    }
+                }
             }
-            else if (typeChartIneffective.ContainsKey(attackerType))
+            else if (typeChartIneffective.ContainsKey(defenderType.GetPokemonType()))
             {
                 plusDamage = 0.5f;
+                if (!(defenderType.GetPokemonTypeTwo() == "No Second Type"))
+                {
+                    if (typeChartEffective.ContainsKey(defenderType.GetPokemonTypeTwo()))
+                    {
+                        plusDamage  = 0.25f;
+                    }
+                }
             }
             else
             {

@@ -40,11 +40,11 @@
                 {
                     if (Soft == "Physical")
                     {
-                        FinaleDamage = (Damage * typeChart.IsTypeEffectiveAndCountPlusDamage(attacker.GetPokemonType(), defender.GetPokemonType())) - (int)(defender.GetDefend() / 2);
+                        FinaleDamage = (Damage * typeChart.IsTypeEffectiveAndCountPlusDamage(attacker, defender)) - (int)(defender.GetDefend() / 2);
                     }
                     else if (Soft == "Special")
                     {
-                        FinaleDamage = (Damage * typeChart.IsTypeEffectiveAndCountPlusDamage(attacker.GetPokemonType(), defender.GetPokemonType())) - (int)(defender.GetSpecialDefend() / 2);
+                        FinaleDamage = (Damage * typeChart.IsTypeEffectiveAndCountPlusDamage(attacker, defender)) - (int)(defender.GetSpecialDefend() / 2);
                     }
                     else if (Soft == "Status")
                     {
