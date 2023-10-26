@@ -2,7 +2,7 @@
 This Is The Pokemon Base Classes File To Let You Make (like Homework Or Assignment?)
 
 Now Version:
-v1.3 Beta
+v2.0 Beta
 
 Warning:
 - This is Just For Fun.
@@ -10,11 +10,16 @@ Warning:
 - If You Are Authorized By Nintendo, You Can Publish The Game Used By My Classes (Must To Credit Me To Your Game/Video)
 
 
-# What About Update v1.3.1?
-- Corrected the problem in TypeChart calculation, and added two type calculation
-
-# About Update v1.3
-- Considering that the Pokémon's abilities may be temporarily reduced during battle, some data in the Pokémon Class have suffixes of **C** and **M** in their names.
-- Minor update in **GetPokemonTypeTwo()**
-- Added method to **restore original ability value after battle**
-- Added **level up** method
+# About Item Update v2.0
+- Some useful methods have been added to Item Class.
+- Add The methods to read or change The ...M suffixes and Moves data in Pokemon Class.
+- Fix The Move Class Data Name Wronglly.
+- Add The methods to read or change The Data in Move Class.
+=====The current methods in Item can do:=====
+-> Posion => Recover The Pokemon Hp
+-> PP => Restore the PP of one move.
+-> Statistic => Improve some statistics of Pok mon
+-> Ability => Change Pokemon Ability
+-> EvolutionStone => Using Evolution Item For Pokemon Evolution
+=============================================
+- Add New Classes To Get More Data Type (Lalapokemon.DataType.PokemonStat).
