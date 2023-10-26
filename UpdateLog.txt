@@ -2,6 +2,10 @@ Pokemon Classes Log
 
 <Lalapinkbun>
 
+===================================================
+=======================1.0=========================
+===================================================
+
 v1.0 Beta
 - New Create Pokemon, Move, TypeChart Class in LalaPokemon Classes.
 - and There Have Base Pokemon thing
@@ -54,3 +58,36 @@ In order to consider that Pokémon may have another attribute, we also made the f
         }
     }
 - Fix The Error When Fix The TypeChart Class in Move Class
+
+===================================================
+========================2.0========================
+===================================================
+
+v2.0 Beta -> Item Update
+- Add The More UseFull Method for Various items in Item Class
+- Add The Method Can Read Moves Data In Pokemon Class
+- Add The Method Can Read or Change The Data ...M suffixes In Pokemon Class
+- The Move Class Date Change To [public string xxx { get; }.etc -> private string xxx;.etc]
+- And Add The Method Can Read or Change Data in Move Class Data
+=====The current methods in Item can do:=====
+In Use
+-> Posion => Recover The Pokemon Hp
+-> PP => Restore the PP of one move.
+-> Statistic => Improve some statistics of Pokémon
+-> Ability => Change Pokemon Ability
+-> EvolutionStone => Using Evolution Item For Pokemon Evolution
+Unused [Will Update After v2.0 Beta Item Update]
+-> Repel => Wild Pokémon will not appear for a short period of time
+-> PokeBall => Used to catch Pokemon
+-> Mint => Give Pokemono smelling The mint can make the Pokémon easier or harder(one of each) to increase the Pokémon's Stat.
+
+Note: There are still many items that I haven’t added yet, they will be added in future updates!
+=============================================
+- Add New Namecpacce and Class New Data Type [Lalapokemon.DataType.PokemonStat]
+=> Lalapokemon.DataType.PokemonStat.statType
+=> Lalapokemon.DataType.PokemonStat.Mint
+=> Lalapokemon.DataType.PokemonStat.Evolution
+=> Lalapokemon.DataType.PokemonStat.Apricorn
+=> Lalapokemon.DataType.PokemonStat.Carry [Not Done Yet]
+
+os: The Item had REALLY A LOT OF ITEM, Producing alone is really time-consuming and difficult.
