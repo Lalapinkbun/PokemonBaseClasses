@@ -19,9 +19,13 @@ Warning:
 =====The current methods in Item can do:=====
 
 -> Posion => Recover The Pokemon Hp
+
 -> PP => Restore the PP of one move.
+
 -> Statistic => Improve some statistics of Pok mon
+
 -> Ability => Change Pokemon Ability
+
 -> EvolutionStone => Using Evolution Item For Pokemon Evolution
 
 =============================================
