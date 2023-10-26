@@ -2,12 +2,12 @@
 {
     public class Move
     {
-        public string Name { get; }
-        public string Type { get; }
-        public int Power { get; }
-        public int Accuracy { get; }
-        public string Soft { get; }
-        public int PP { get; }
+        private string Name;
+        private string Type;
+        private int Power;
+        private int Accuracy;
+        private string Soft;
+        private int PP;
 
         private TypeChart typeChart = new TypeChart();
 
@@ -23,6 +23,39 @@
             PP = pP;
         }
 
+        public string GetName()
+        {
+            return Name;
+        }
+
+        public string GetMoveType()
+        {
+            return Type;
+        }
+
+        public int GetPower()
+        {
+            return Power;
+        }
+
+        public int GetAccuracy()
+        {
+            return Accuracy;
+        }
+
+        public string GetSoft()
+        {
+            return Soft;
+        }
+
+        public int GetMovePP()
+        {
+            return PP;
+        }
+        public void UpPP(Move move,int num)
+        {
+            move.PP += num;
+        }
         public int CalculateDamage(Pokemon attacker, Pokemon defender)
         {
             float FinaleDamage = 0;

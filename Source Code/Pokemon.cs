@@ -93,7 +93,7 @@
             Type2 = type2;
             Ability = ability;
         }
-
+        //Base Type and ...C
         public string GetName()
         {
             return Name;
@@ -219,6 +219,11 @@
             return Ability;
         }
 
+        public void SetAbility(string ability)
+        {
+            this.Ability = ability;
+        }
+
         public void BackToDefault()
         {
             HealPointC = HealLevelM;
@@ -231,6 +236,43 @@
         public void LevelUp()
         {
             Level++;
+        }
+
+        //...M
+        public int GetHpMax()
+        {
+            return HealLevelM;
+        }
+
+        public int GetAttackMax()
+        {
+            return AttackM;
+        }
+
+        public int GetDefenseMax()
+        {
+            return DefendM;
+        }
+
+        public int GetSpecielAttackMax()
+        {
+            return SpecialAttackM;
+        }
+
+        public int GetSpecielDefenseMax()
+        {
+            return SpecialDefendM;
+        }
+
+        public int GetSpeedMax()
+        {
+            return SpeedM;
+        }
+
+
+        public Move ReadMove(int num)
+        {
+            return moves[num];
         }
     }
 }
