@@ -15,11 +15,13 @@ Warning:
 - Add The methods to read or change The ...M suffixes and Moves data in Pokemon Class.
 - Fix The Move Class Data Name Wronglly.
 - Add The methods to read or change The Data in Move Class.
+
 =====The current methods in Item can do:=====
 -> Posion => Recover The Pokemon Hp
 -> PP => Restore the PP of one move.
 -> Statistic => Improve some statistics of Pok mon
 -> Ability => Change Pokemon Ability
 -> EvolutionStone => Using Evolution Item For Pokemon Evolution
+
 =============================================
 - Add New Classes To Get More Data Type (Lalapokemon.DataType.PokemonStat).
