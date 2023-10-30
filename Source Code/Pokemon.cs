@@ -3,9 +3,8 @@
     public class Pokemon
     {
         private string Name;
-        private int Level;
         private string PokemonID;
-        private int PokemonEXP;
+        private int Level;
         //Pokemon ability
         private int HealPointC;
         private int HealLevelM;
@@ -22,19 +21,16 @@
         private string Type;
         private string? Type2;
         private string Ability;
+        private string? Status;
 
-        private int needExpToLevelUp = 10;
-
-        private bool haslevelup = false;
         private List<Move> moves = new List<Move>();
 
         //Two Type
-        public Pokemon(string name, int level, string pokemonID, int pokemonEXP, int hP, int aT, int sT, int dF, int sF, int sP, string type, string type2, string ability)
+        public Pokemon(string name, string pokemonID, int hP, int aT, int sT, int dF, int sF, int sP, string type, string type2, string ability)
         {
             Name = name;
-            Level = level;
             PokemonID = pokemonID;
-            PokemonEXP = pokemonEXP;
+            Level = 1;
             HealPointC = hP;
             HealLevelM = hP;
             AttackC = aT;
@@ -53,12 +49,11 @@
         }
 
         //One Type
-        public Pokemon(string name, int level, string pokemonID, int pokemonEXP, int hP, int aT, int dF, int sT, int sF, int sP, string type, string ability)
+        public Pokemon(string name, string pokemonID, int hP, int aT, int dF, int sT, int sF, int sP, string type, string ability)
         {
             Name = name;
-            Level = level;
             PokemonID = pokemonID;
-            PokemonEXP = pokemonEXP;
+            Level = 1;
             HealPointC = hP;
             HealLevelM = hP;
             AttackC = aT;
@@ -99,20 +94,12 @@
             return Name;
         }
 
-        public int GetLevel()
-        {
-            return Level;
-        }
 
         public string GetPokemonID() 
         {
             return PokemonID;
         }
 
-        public int GetPokemonEXP()
-        {
-            return PokemonEXP;
-        }
 
         public int GetHealPoint()
         {
@@ -233,10 +220,6 @@
             SpeedC = SpeedM;
         }
 
-        public void LevelUp()
-        {
-            Level++;
-        }
 
         //...M
         public int GetHpMax()
@@ -269,6 +252,15 @@
             return SpeedM;
         }
 
+        public int GetLevel()
+        {
+            return Level;
+        }
+
+        public void UpLevel()
+        {
+            Level += 1;
+        }
 
         public Move ReadMove(int num)
         {

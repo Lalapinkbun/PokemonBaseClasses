@@ -14,6 +14,16 @@
                 Speed
             }
 
+            public enum StatCondition
+            {
+                Poison,
+                Badly_Poison,
+                Sleep,
+                Paralysis,
+                Burn,
+                Freeze
+            }
+
             public enum Mint
             {
                 Lonely_Mint,
@@ -119,6 +129,7 @@
                 Soul_Dew,
                 Shell_Bell
             }
+  
         }
     }
 }
