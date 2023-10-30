@@ -12,14 +12,14 @@ Warning:
 # About Update v2.1
 - Add The Status Data In Pokemon Class
 - Add The New Date Type
-- Add More Item Method (As for which one can be used, please see here: [See Here](https://github.com/Lalapinkbun/PokemonBaseClasses/edit/main/README.md#now-item-class-can-use))
+- Add More Item Method (As for which one can be used, please see here: [See Here](https://github.com/Lalapinkbun/PokemonBaseClasses#now-item-class-can-use))
 
 # About Item Update v2.0
 - Some useful methods have been added to Item Class.
 - Add The methods to read or change The ...M suffixes and Moves data in Pokemon Class.
 - Fix The Move Class Data Name Wronglly.
 - Add The methods to read or change The Data in Move Class.
-=====The current methods in Item can do: ([See Here](https://github.com/Lalapinkbun/PokemonBaseClasses/edit/main/README.md#now-item-class-can-use))=====
+=====The current methods in Item can do: ([See Here](https://github.com/Lalapinkbun/PokemonBaseClasses#now-item-class-can-use))=====
 - Add New Classes To Get More Data Type (Lalapokemon.DataType.PokemonStat).
 
 # Now Item Class Can Use:
