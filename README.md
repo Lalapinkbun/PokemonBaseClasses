@@ -2,7 +2,7 @@
 This Is The Pokemon Base Classes File To Let You Make (like Homework Or Assignment?)
 
 Now Version:
-v2.0 Beta
+v2.1 Beta
 
 Warning:
 - This is Just For Fun.
