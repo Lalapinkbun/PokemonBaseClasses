@@ -172,5 +172,7 @@ Unused [Will Update After v2.0 Beta Item Update]
 
 Note: There are still some items that I haven’t added yet, they will be added in future updates! (Almost Done...)
 ============================================================
+- Temporarily remove Pokemon EXP in Pokemon Class
+
 
 os: I finally know why Pokémon games are so expensive...
