@@ -91,3 +91,86 @@ Note: There are still many items that I haven’t added yet, they will be added in
 => Lalapokemon.DataType.PokemonStat.Carry [Not Done Yet]
 
 os: The Item had REALLY A LOT OF ITEM, Producing alone is really time-consuming and difficult.
+
+v2.1 Beta
+- Add The Status Data In Pokemon Class
+=============================================
+- Add The New Data Type In [Lalapokemon.DataType.PokemonStat]
+=> Lalapokemon.DataType.PokemonStat.StatCondition
+=============================================
+- Add The More Items Method in Item Class
+=====The current methods in Item can do: (2.0 to 2.1)=====
+In Use
+-> Posion => Recover The Pokemon Hp
+-> PP => Restore the PP of one move.
+-> Statistic => Improve some statistics of Pokémon
+-> Ability => Change Pokemon Ability
+-> EvolutionStone => Using Evolution Item For Pokemon Evolution
+Unused [Will Update After v2.0 Beta Item Update]
+- Items for outdoor use
+-> Repel => Wild Pokémon will not appear for a short period of time
+-> Flute => Can solve Status condition and other uses
+-> Mulch => Fertilizer for growing fruit trees. But it is completely unsuitable for the soil in the Hoenn region, so it has no effect.
+-> Nectar => Can Change what some Pokémon look like
+
+- Items for training Pokémon
+-> Mint => Give Pokemono smelling The mint can make the Pokémon easier or harder(one of each) to increase the Pokémon's Stat.
+-> Grit => Can Increases The Pokemon Effort level.
+-> Mochi => Can Increases The Pokemon 1 of Base Points.
+
+- Evolution Items
+-> EvulotionOther => Other Item For Evulotion
+
+- Apricorn Items
+-> Apricorn => Apricorn that Pokémon can eat
+
+- Tera Shard Items
+-> Tera_Shard => When a Terastal Pokémon is defeated, there is a very low chance that the broken Terastal Gem will crystallize into this object. Just sell it
+
+- Carry Items
+-> NormalCarry => Generally, there are no series of Items
+-> CarryBerry => Recover Hp, Status condition and PP
+-> Incense => Various increases
+-> Plate => Increases The Type Damage
+-> Power => Can make the Pokémon to increase the Pokémon's Type Damage
+-> Drive => Can Make Genesect of Techno Blast Skill Type Change
+-> Gem => Increases The Type Damage, But Just Once   
+-> MegaStone => Can Make Some of Pokemon Mega Evulotion
+-> Seed => In a specific field, the defense and special defense of your Pokémon will be Increase.
+-> Memory => For Type: Null or Silvally To Chang They Type.
+-> Sweet => For Milcery.
+
+- Mail Items
+-> Mail => I don't Know What It Does
+
+- Candy Items
+-> Candy => Get Exp or Up Lavel or increase the Pokémon's Stat.
+
+- PokeBall
+-> PokeBall => Used to catch Pokemon
+
+- Valuable Items
+-> Valuable => You Can Use To Sell Something?
+
+- Fossil Items
+-> Fossil => Maybe some Pokémon can be hatched?
+
+- Combat Items
+-> Combat => Use For Battle
+
+- Technical Items
+-> Technical => Learn Something
+
+- Recover Items
+!-> More Reciver Item I didnt add yet!
+
+- Z Items
+-> PokemonZ => To Let Pokemon Use The Z Move
+
+- Berry Items
+-> Berry => Almighty Barry
+
+Note: There are still some items that I haven’t added yet, they will be added in future updates! (Almost Done...)
+============================================================
+
+os: I finally know why Pokémon games are so expensive...
