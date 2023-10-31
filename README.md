@@ -9,6 +9,12 @@ Warning:
 - You Can Use This For Your Assignment, But You Can't Publish The Game Used By My Classes, otherwise...
 - If You Are Authorized By Nintendo, You Can Publish The Game Used By My Classes (Must To Credit Me To Your Game/Video)
 
+
+# About Update v2.1.1
+- Modified some Methods in Item Class
+- Add The lot of New Date Type
+- [Item Class Can Use Update](https://github.com/Lalapinkbun/PokemonBaseClasses#now-item-class-can-use)
+
 # About Update v2.1
 - Add The Status Data In Pokemon Class
 - Add The New Date Type
@@ -18,8 +24,7 @@ Warning:
 
 In Use
 - Posion
-- PP
-- Statistic
+- Wing
 - Ability
 - EvolutionStone
 
@@ -31,6 +36,7 @@ Unused [Will Update After v2.1 Beta Update]
   - Nectar
 
 - Items for training Pokémon
+  - Enhancer
   - Mint
   - Grit
   - Mochi
