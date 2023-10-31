@@ -28,7 +28,7 @@ In Use
 - Ability
 - EvolutionStone
 
-Unused [Will Update After v2.1 Beta Update]
+Unused [Will Update After Update]
 - Items for outdoor use
   - Repel
   - Flut
