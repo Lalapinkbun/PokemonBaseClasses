@@ -19,7 +19,9 @@ Warning:
 - Add The methods to read or change The ...M suffixes and Moves data in Pokemon Class.
 - Fix The Move Class Data Name Wronglly.
 - Add The methods to read or change The Data in Move Class.
+
 =====The current methods in Item can do: ([See Here](https://github.com/Lalapinkbun/PokemonBaseClasses#now-item-class-can-use))=====
+
 - Add New Classes To Get More Data Type (Lalapokemon.DataType.PokemonStat).
 
 # Now Item Class Can Use:
