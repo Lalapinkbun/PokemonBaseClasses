@@ -47,12 +47,13 @@ namespace LalaPokemon
         }
 
         //Items for training Pokémon
-        public void PP(Pokemon pokemon, int Move, int Length)
+        public void Enhancer()
         {
-            pokemon.ReadMove(Move).UpPP(pokemon.ReadMove(Move), Length);
+            //Increase The Move PP and Pokemon Statistic Base Point
+            //Update Later
         }
 
-        public void Statistic(Pokemon pokemon, PokemonDataType.StatType statType, int Length)
+        public void Wing(Pokemon pokemon, PokemonDataType.StatType statType, int Length)
         {
             if (pokemon == null)
             {
