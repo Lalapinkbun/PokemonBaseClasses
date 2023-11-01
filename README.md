@@ -9,6 +9,8 @@ Warning:
 - You Can Use This For Your Assignment, But You Can't Publish The Game Used By My Classes, otherwise...
 - If You Are Authorized By Nintendo, You Can Publish The Game Used By My Classes (Must To Credit Me To Your Game/Video)
 
+# About Update v2.1.1.1
+- New Add ...C , ...M , ...O (Original[Can't Be Change]) suffixes in Move Class [PP => PPC + PPM + PPO]
 
 # About Update v2.1.1
 - Modified some Methods in Item Class
