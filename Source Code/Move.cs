@@ -7,7 +7,9 @@
         private int Power;
         private int Accuracy;
         private string Soft;
-        private int PP;
+        private int PPC;
+        private int PPM;
+        private int PPO;
 
         private TypeChart typeChart = new TypeChart();
 
@@ -20,7 +22,9 @@
             Power = power;
             Accuracy = accuracy;
             Soft = soft;
-            PP = pP;
+            PPC = pP;
+            PPM = pP;
+            PPO = pP;
         }
 
         public string GetName()
@@ -48,13 +52,26 @@
             return Soft;
         }
 
-        public int GetMovePP()
+        public int GetMovePPC()
         {
-            return PP;
+            return PPC;
+        }
+        public int GetMovePPM()
+        {
+            return PPM;
+        }
+
+        public int GetMovePPO()
+        {
+            return PPO;
         }
         public void UpPP(Move move,int num)
         {
-            move.PP += num;
+            move.PPC += num;
+        }
+        public void UpPPM(Move move, int num)
+        {
+            move.PPM += num;
         }
         public int CalculateDamage(Pokemon attacker, Pokemon defender)
         {
@@ -67,7 +84,7 @@
             int randomValue = random.Next(1, 100);
 
             // Physical, Special or Status
-            if (PP >= 0)
+            if (PPC >= 0)
             {
                 if (randomValue <= Accuracy)
                 {

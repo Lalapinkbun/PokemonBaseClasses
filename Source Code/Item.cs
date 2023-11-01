@@ -21,7 +21,7 @@ namespace LalaPokemon
         }
 
         //Items for outdoor use
-        public void Repel()
+        public void Repel(PokemonDataType.Repel repel, Pokemon FirstPokemonInParty)
         {
             //The Pokemon Will Not Appear a short period of time
             //Using Timer
@@ -40,15 +40,70 @@ namespace LalaPokemon
             //Update Later
         }
 
-        public void Nectar()
+        public void Nectar(PokemonDataType.Nectar nectar, Pokemon pokemon)
         {
-            //Can Change what some Pokémon look like
-            //Update Later
+            switch(nectar)
+            {
+                case PokemonDataType.Nectar.Red_Nectar:
+                    //Baile Style
+                    break;
+                case PokemonDataType.Nectar.Yellow_Nectar:
+                    //Pom-Pom Style
+                    break;
+                case PokemonDataType.Nectar.Pink_Nectar:
+                    //Pa'u Style
+                    break;
+                case PokemonDataType.Nectar.Purple_Nectar:
+                    //Sensu Style
+                    break;
+            }
         }
 
         //Items for training Pokémon
-        public void Enhancer()
+        public void Enhancer(PokemonDataType.Enhancer enhancer, Pokemon? pokemon, Move? move)
         {
+            switch(enhancer)
+            {
+                case PokemonDataType.Enhancer.PP_Up:
+                    if (move != null)
+                    {
+                        int newPPM = (int)(move.GetMovePPM() * 0.2) + move.GetMovePPM();
+                        if (!(move.GetMovePPM() > (int)(move.GetMovePPO() * 1.6) + move.GetMovePPO()))
+                        {
+                            move.UpPPM(move, newPPM);
+                        }
+                        else
+                        {
+                            //The maximum limit has been reached (160%)
+                        }
+                    }
+                    else
+                    {
+                        throw new ArgumentNullException("ErrorItem004 Move Is Null", "Move");
+                    }   
+                    break;
+                case PokemonDataType.Enhancer.PP_Max:
+                    if (move != null)
+                    {
+                        int newPPM = (int)(move.GetMovePPM() * 0.6) + move.GetMovePPM();
+                        if (!(move.GetMovePPM() > (int)(move.GetMovePPO() * 1.6) + move.GetMovePPO()))
+                        {
+                            move.UpPPM(move, newPPM);
+                        }
+                        else
+                        {
+                            //The maximum limit has been reached (160%)
+                        }
+                    }
+                    else
+                    {
+                        throw new ArgumentNullException("ErrorItem004 Move Is Null", "Move");
+                    }
+                    break;
+                case PokemonDataType.Enhancer.HP_Up:
+                    //Hp base Point
+                    break;
+            }
             //Increase The Move PP and Pokemon Statistic Base Point
             //Update Later
         }
