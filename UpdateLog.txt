@@ -184,3 +184,8 @@ v2.1.1 beta
 - Add More New Data Type Base Item Name In [Lalapokemon.DataType.PokemonStat] !-> It will not be listed here. The baic name is the same as in Item Class.
 
 Note: There are still some items that I haven’t added yet, they will be added in future updates! (Almost Done...)
+
+v2.1.1.1 beta
+- New Add ...C , ...M , ...O (Original[Can't Be Change]) suffixes in Move Class [PP => PPC + PPM + PPO]
+
+Note: I noticed that many things about the effects of Items have not been implemented in other classes. They will be updated together with other classes in the future.
